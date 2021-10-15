@@ -108,7 +108,8 @@ public final class Main {
         Future<?> future = eventLoopGroup.shutdownGracefully();
         infoClient.shutdown();
         playerClient.shutdown();
-        CacheHub.CHALLENGE_MAP.clear();
+        CacheHub.A2S_PLAYER_CHALLENGE_MAP.clear();
+        CacheHub.A2S_INFO_CHALLENGE_MAP.clear();
 
         Utils.safeRelease(CacheHub.A2S_INFO);
         Utils.safeRelease(CacheHub.A2S_PLAYER);

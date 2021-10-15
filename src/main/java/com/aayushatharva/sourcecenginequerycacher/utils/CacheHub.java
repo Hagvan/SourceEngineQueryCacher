@@ -23,7 +23,11 @@ public final class CacheHub {
     /**
      * Challenge Code Map
      */
-    public static final Map<String, String> CHALLENGE_MAP = new SelfExpiringMap<>(new ConcurrentHashMap<>(),
+    public static final Map<String, String> A2S_PLAYER_CHALLENGE_MAP = new SelfExpiringMap<>(new ConcurrentHashMap<>(),
+            Duration.ofMillis(Config.ChallengeCodeTTL),
+            false);
+
+    public static final Map<String, String> A2S_INFO_CHALLENGE_MAP = new SelfExpiringMap<>(new ConcurrentHashMap<>(),
             Duration.ofMillis(Config.ChallengeCodeTTL),
             false);
 }

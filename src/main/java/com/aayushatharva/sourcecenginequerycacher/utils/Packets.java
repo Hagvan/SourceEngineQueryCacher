@@ -8,7 +8,7 @@ public final class Packets {
     /**
      * FFFFFFFF41
      */
-    public static final ByteBuf A2S_PLAYER_CHALLENGE_RESPONSE = Main.BYTE_BUF_ALLOCATOR.directBuffer()
+    public static final ByteBuf A2S_GENERIC_CHALLENGE_RESPONSE = Main.BYTE_BUF_ALLOCATOR.directBuffer()
             .writeBytes(new byte[]{-1, -1, -1, -1, 65});
 
     /**
